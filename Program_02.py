@@ -3,14 +3,16 @@
 # Password is valid if criteria is met.
 # > 15 letters
 # Have atleast one capital letter.
-# Have atleat one number.
+# Have atleast one number.
 # Have atleast one special character.
 
 
 def inputed_password():
-    print(
-        f"Input a password with 15 charancters with one UPPPERCASE and special Character."
-    )
+    print(f"Hello user please follow the given instructions bellow.")
+    print(f"Input 15 characters in your password.")
+    print(f"Input atleast one UPPERCASE and a special character.")
+    print(f"Input atleast one number.")
+    print(f"------------------------------------------------------------------")
     combination = input("Enter a password: ")
     return combination
 

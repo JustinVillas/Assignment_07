@@ -2,6 +2,7 @@
 # Create a program that ask for a sentence input
 # Display the number of words, vowels and consonants in the input
 
+
 def inputed_senc():
     senc = input("Construct a senctence: ")
     return senc
@@ -15,11 +16,10 @@ def count_letters(cons_senc):
 
         char = cons_senc[letters]
 
-        if ((char >= 'a' and char <= 'z') or
-                (char >= 'A' and char <= 'Z')):
+        if (char >= "a" and char <= "z") or (char >= "A" and char <= "Z"):
 
             char = char.lower()
-            if (char == 'a' or char == 'e' or char == 'i' or char == 'o' or char == 'u'):
+            if char == "a" or char == "e" or char == "i" or char == "o" or char == "u":
                 vowels += 1
             else:
                 consonants += 1

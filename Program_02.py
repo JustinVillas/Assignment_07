@@ -6,32 +6,35 @@
 # Have atleat one number.
 # Have atleast one special character.
 
+
 def inputed_password():
+    print(
+        f"Input a password with 15 charancters with one UPPPERCASE and special Character."
+    )
     combination = input("Enter a password: ")
     return combination
 
 
 def check_password(key):
-    special_sym = ["!", "@", "#", "%", "~",
-                   "$", "^", "&", "*", "(", ")", "_", "+"]
+    special_sym = ["!", "@", "#", "%", "~", "$", "^", "&", "*", "(", ")", "_", "+"]
     val = True
 
-    if (len(key) > 15):
+    if len(key) > 15:
         if any(char.isdigit() for char in key):
             if any(char.upper() for char in key):
                 if any(char.lower() for char in key):
                     if any(char in special_sym for char in key):
                         val = True
-        print(f"The password is valid")
+                        print(f"The password is valid")
 
     else:
-        if (len(key) <= 15):
+        if len(key) <= 15:
             if not any(char.isdigit() for char in key):
                 if not any(char.upper() for char in key):
                     if not any(char.lower() for char in key):
                         if not any(char in special_sym for char in key):
                             val = False
-        print(f"The password is not valid")
+                            print(f"The password is not valid")
 
 
 key = inputed_password()
